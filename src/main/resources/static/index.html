@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Reduction Platform</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Food Rescue</h1>
+        <p>Save food. Reduce waste. Help people.</p>
+    </header>
+
+    <main>
+
+        <!-- Donation Summary -->
+        <section class="summary">
+            <h2>Donation Summary</h2>
+
+            <div id="summary">
+                <p>Loading donation summary...</p>
+            </div>
+        </section>
+
+        <!-- Donate Food Form -->
+        <section class="add-donation">
+            <h2>Donate Food</h2>
+
+            <form id="donationForm">
+
+                <label for="foodName">Food Name</label>
+                <input
+                    type="text"
+                    id="foodName"
+                    name="foodName"
+                    placeholder="e.g. Vegetable Biryani"
+                    required
+                >
+
+                <label for="quantity">Quantity</label>
+                <input
+                    type="text"
+                    id="quantity"
+                    name="quantity"
+                    placeholder="e.g. 10 meals"
+                    required
+                >
+
+                <label for="donorName">Donor Name</label>
+                <input
+                    type="text"
+                    id="donorName"
+                    name="donorName"
+                    placeholder="e.g. Green Leaf Restaurant"
+                    required
+                >
+
+                <label for="pickupLocation">Pickup Location</label>
+                <input
+                    type="text"
+                    id="pickupLocation"
+                    name="pickupLocation"
+                    placeholder="e.g. Bengaluru"
+                    required
+                >
+
+                <button type="submit">Add Donation</button>
+            </form>
+
+            <p id="formMessage" role="status"></p>
+        </section>
+
+
+        
+<!-- Search Food Donations -->
+<section class="search-donations">
+    <h2>Search Food Donations</h2>
+
+    <form id="searchForm">
+        <label for="searchType">Search By</label>
+
+        <select id="searchType">
+            <option value="foodName">Food Name</option>
+            <option value="location">Pickup Location</option>
+        </select>
+
+        <label for="searchInput">Enter Search Term</label>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="e.g. Idli or Bengaluru"
+            required
+        >
+
+        <button type="submit">Search</button>
+        <button type="button" id="clearSearchBtn">Show All Donations</button>
+    </form>
+
+    <p id="searchMessage" role="status"></p>
+</section>
+
+
+        
+<!-- Available Food Donations -->
+<section class="donations">
+    <h2>Food Donations</h2>
+
+    <label for="statusFilter">Filter by Status</label>
+
+    <select id="statusFilter">
+        <option value="ALL">All Donations</option>
+        <option value="AVAILABLE">Available</option>
+        <option value="CLAIMED">Claimed</option>
+        <option value="PICKED_UP">Picked Up</option>
+    </select>
+
+    <button id="refreshBtn" type="button">
+        Refresh Donations
+    </button>
+
+    <div id="donationList">
+        <p>Loading donations...</p>
+    </div>
+</section>
+
+
+        
+
+
+
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>

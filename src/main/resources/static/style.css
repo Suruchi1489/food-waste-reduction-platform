@@ -1,0 +1,201 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8f4;
+    color: #26352a;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #247447;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    color: #247447;
+    margin-bottom: 18px;
+}
+
+button {
+    background-color: #247447;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #185a34;
+}
+
+#summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.summary-card {
+    background-color: #e9f5ec;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.summary-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #247447;
+}
+
+#donationList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.donation-card {
+    border: 1px solid #dce7de;
+    border-radius: 9px;
+    padding: 18px;
+    overflow-wrap: anywhere;
+}
+
+.donation-card h3 {
+    color: #247447;
+    margin-bottom: 10px;
+}
+
+.donation-card p {
+    margin: 5px 0;
+}
+
+.status {
+    display: inline-block;
+    background-color: #e9f5ec;
+    color: #247447;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.donation-card button {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 16px;
+    }
+}
+
+
+/* Add Donation Form */
+
+#donationForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+#donationForm label {
+    font-weight: bold;
+    align-self: end;
+}
+
+#donationForm input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce7de;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+#donationForm input:focus {
+    border-color: #247447;
+    box-shadow: 0 0 0 2px rgba(36, 116, 71, 0.12);
+}
+
+#donationForm button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 8px;
+}
+
+#formMessage {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Make the form mobile-friendly */
+
+@media (max-width: 600px) {
+    #donationForm {
+        grid-template-columns: 1fr;
+    }
+
+    #donationForm button {
+        grid-column: 1;
+        width: 100%;
+    }
+}
+
+
+/* Temporary test: make Donate Food visible */
+.add-donation {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 100px;
+    position: relative;
+    z-index: 1;
+}
